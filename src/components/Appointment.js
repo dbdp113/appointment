@@ -1,29 +1,54 @@
+import {BsFillCaretDownFill} from 'react-icons/bs';
+
 export default function Appointment(){
   return(
     <div id="Appointment">
-            <h3>신간 도서 대출 예약</h3>
-      <dl>
-        <dt>도서명</dt>
-        <dd><input type="text" /></dd>
-        <dt>저자명</dt>
-        <dd><input type="text" /></dd>
-        <dt>출판사명</dt>
-        <dd><input type="text" /></dd>
-        <dt>대출 희망 날짜</dt>
-        <dd><input type="date" /></dd>
-        <dt>대출 희망 시간</dt>
-        <dd><input type="time" /></dd>
-        <dt>이른 대출 가능 알림 수신 여부</dt>
-        <dd>
-          대출 희망 날짜보다 빠르게 도서 대출이 가능할 때 문자메시지로 알려드리는 서비스입니다.
-        </dd>
-        <dd>
-          <label htmlFor="ok">수신</label>
-          <input type="radio" name="message" value="ok" id="ok" checked />
-          <label htmlFor="no">거부</label>
-          <input type="radio" name="message" value="no" id="no" />
-        </dd>        
-      </dl>
+      <h3>도서 대출 예약 &nbsp;<span><BsFillCaretDownFill /></span></h3>
+      <div id="box">
+      <figure>
+        <img src="" alt="" />
+        <figcaption>
+          <dl>
+            <dt>도서명</dt>
+            <dd>bookName</dd>
+            <dt>저자명</dt>
+            <dd>writer</dd>
+            <dt>출판사명</dt>
+            <dd>publisher</dd>
+          </dl>
+        </figcaption>
+      </figure>
+        <ul>
+          <li>
+          <p>* 이 붙은 항목은 필수 항목입니다.</p>
+          </li>
+          <li>
+          <label htmlFor="userName">* 예약자명</label>
+          <input type="text" />
+          </li>
+          <li>
+          <label htmlFor="aptDate">* 대출 희망 날짜</label>
+          <input type="date" /> 
+          </li>
+          <li>
+          <label htmlFor="aptTime">&nbsp; 대출 희망 시간</label>
+          <input type="time" /> 
+          </li>
+          <li>
+          <label htmlFor="message">* 빠른 대출 가능 알림 수신 여부</label>
+          <div id="check">
+          <p>
+            대출 희망 날짜보다 빠르게 도서 대출이 가능할 때 문자메시지로 알려드리는 서비스입니다.
+          </p>
+            <label htmlFor="ok">수신</label>
+            <input type="radio" name="message" value="ok" id="ok" defaultChecked />
+            <label htmlFor="no">거부</label>
+            <input type="radio" name="message" value="no" id="no" />
+          </div> 
+          </li>
+          <li><input type="submit" value="예약하기" /></li>
+        </ul>
+            </div>
     </div>
   )
 }
