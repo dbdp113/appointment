@@ -11,9 +11,10 @@ import book_10 from "../image/book_10.jpg";
 
 export default function BookRank({book}){
   const bookImages = [book_01, book_02, book_03, book_04, book_05, book_06, book_07, book_08, book_09, book_10];
+  const book10Rank = book.slice(0,10);
   return(
     <>
-    {book.map((book,index) => (<li key={book.id}>
+    {book10Rank.map((book,index) => (<li key={book.id}>
       <figure>
         <span>{Number(book.id) +1}</span>
         <img src={bookImages[index]} alt={book.bookName} />
