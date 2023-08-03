@@ -24,7 +24,7 @@ input:focus {outline: none;}
   position: absolute;
   top: -1px;left: -45px;
   font-size: 35px;
-  color: #0066ff;
+  color: #b1d77c;
 }
 /*  */
 #Search{
@@ -33,7 +33,7 @@ input:focus {outline: none;}
   margin-bottom: 20px;
 }
 #Search>h3{
-  background-color: #0066ff;
+  background-color: #b1d77c;
   color: #fff;
   font-size: 18px;
   font-weight: bolder;
@@ -57,7 +57,7 @@ input:focus {outline: none;}
     background-color: #fff;
   padding: 20px;
   border-radius: 0 0 20px 20px;
-  border: 1px solid #0066ff;
+  border: 1px solid #b1d77c;
   box-sizing: border-box;
 }
 #Search>.box>select{
@@ -85,7 +85,7 @@ input:focus {outline: none;}
   background-color: #fff;
 }
 #BookRank>h3{
-  background-color: #0066ff;
+  background-color: #b1d77c;
   color: #fff;
   font-size: 18px;
   font-weight: bolder;
@@ -107,7 +107,7 @@ input:focus {outline: none;}
     background-color: #fff;
   padding: 20px;
   border-radius: 0 0 20px 20px;
-  border: 1px solid #0066ff;
+  border: 1px solid #b1d77c;
   box-sizing: border-box;
 }
 #BookRank>.box figure{
@@ -120,12 +120,11 @@ input:focus {outline: none;}
   width: 30px;
   font-size: 23px;
   text-align: center;
-  color: #0066ff;
+  color: #7dba26;
   font-weight: bold;
   line-height: 30px;
 }
 #BookRank>.box figure>img{
-  background-color: #0066ff;
   width: 50px;
   height: 60px;
 }
@@ -134,7 +133,7 @@ input:focus {outline: none;}
   margin-left: 8px;
 }
 #BookRank>.box figure>figcaption>dl>dt{
-  color: #0066ff;
+  color: #61901e;
   font-size: 14px;
   font-weight: bold;
   margin-bottom: 5px;
@@ -151,7 +150,7 @@ input:focus {outline: none;}
   top: 72px; right: 20px;
 }
 #BookList>h3{
-  background-color: #0066ff;
+  background-color: #b1d77c;
   color: #fff;
   font-size: 18px;
   font-weight: bolder;
@@ -170,7 +169,7 @@ input:focus {outline: none;}
 #BookList>.box{
   height: 1075px;
   border-radius: 0 0 20px 20px;
-  border: 1px solid #0066ff;
+  border: 1px solid #b1d77c;
   box-sizing: border-box;
 
 }
@@ -200,8 +199,8 @@ input:focus {outline: none;}
   margin-left: 20px;
 }
 #BookList>.box>#frame>ul>li>figure button{
-  border: 1.5px solid #0066ff;
-  color: #0066ff;
+  border: 1.5px solid #7dba26;
+  color: #7dba26;
   background-color: #fff;
   font-weight: bold;
   padding: 7px 15px;
@@ -228,7 +227,7 @@ input:focus {outline: none;}
   font-weight: bold;
 }
 #BookList>.box>#frame>ul>li>figure ul>li:first-of-type>span{
-  color: #0066ff;
+  color: #61901e;
   font-size: 18px;
 }
 #BookList>.box>#frame>ul>li>figure ul>li:nth-of-type(2)>span{
@@ -253,7 +252,7 @@ input:focus {outline: none;}
   color: #fff;
 }
 #modal>h3{
-  background-color: #0066ff;
+  background-color: #b1d77c;
   color: #fff;
   font-size: 18px;
   font-weight: bolder;
@@ -265,7 +264,7 @@ input:focus {outline: none;}
 #BookInfo{
   background-color: #fff;
   border-radius: 0 0 20px 20px;
-  border: 1px solid #0066ff;
+  border: 1px solid #b1d77c;
   box-sizing: border-box;
 }
 #BookInfo>figure{
@@ -285,8 +284,8 @@ input:focus {outline: none;}
   flex-direction: column;
 }
 #BookInfo>figure #btn>button{
-  border: 1.5px solid #0066ff;
-  color: #0066ff;
+  border: 1.5px solid #7dba26;
+  color: #7dba26;
   background-color: #fff;
   font-weight: bold;
   padding: 7px 15px;
@@ -315,7 +314,7 @@ input:focus {outline: none;}
   font-size: 15px;
 }
 #BookInfo>figure>figcaption>ul>li:first-of-type>span{
-  color: #0066ff;
+  color: #61901e;
   font-weight: bold;
 }
 #BookInfo>figure>figcaption>ul>li:nth-of-type(2)>span{
@@ -337,11 +336,11 @@ width: 640px;
 margin: 0 auto 40px;
 }
 #BookAptList>table th{
-  background-color: #c6ddff;
+  background-color: #d7eabc;
   font-weight: 600;
   line-height: 1.8;
-  border-top: 1px solid #0066ff;
-  border-bottom: 1px solid #0066ff;
+  border-top: 1px solid #b1d77c;
+  border-bottom: 1px solid #b1d77c;
 }
 #BookAptList>table>tbody>tr>td{
   text-align: center;
@@ -353,7 +352,7 @@ margin: 0 auto 40px;
 }
 #Appointment>h3{
   width: 100%;
-  background-color: #0066ff;
+  background-color: #b1d77c;
   color: #fff;
   font-size: 18px;
   font-weight: bolder;
@@ -403,7 +402,7 @@ margin: 0 auto 40px;
   margin-left: 10px;
 }
 #Appointment>#box>figure ul>li:first-of-type>span{
-  color: #0066ff;
+  color: #61901e;
   font-weight: bold;
 }
 #Appointment>#box>figure ul>li:last-child>span{
@@ -429,7 +428,7 @@ margin: 0 auto 40px;
 }
 #Appointment>#box label{
   font-size: 14px;
-  color: #0066ff;
+  color: #61901e;
   font-weight: bold;
 }
 #Appointment>#box input{
@@ -439,13 +438,13 @@ margin: 0 auto 40px;
   width: 158px;
   height: 30px;
   border: none;
-  border-bottom: 1px solid #0066ff;
+  border-bottom: 1px solid #b1d77c;
 }
 #Appointment>#box input[type=date],input[type=time]{
   width: 100px;
   height: 30px;
   border: none;
-  border-bottom: 1px solid #0066ff;
+  border-bottom: 1px solid #b1d77c;
 }
 
 #Appointment>#box>ul>li:nth-of-type(6){
@@ -468,9 +467,9 @@ font-size: 14px;
 #Appointment>#box>ul>li:last-of-type>input[type=submit]{
   width: 240px;
   height: 30px;
-  border: 1px solid #0066ff;
+  border: 1px solid #7dba26;
   background-color: #fff;
-  color: #0066ff;
+  color: #7dba26;
   font-weight: bold;
   border-radius: 5px;
   box-sizing: border-box;
