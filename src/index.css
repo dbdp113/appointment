@@ -1,6 +1,6 @@
 body{
   height: 100%; width: 100%;
-  background: url('/public/images/bg.jpg') repeat-y center center;
+  background: url('/src/image/bg.jpg') repeat-y center center;
   background-size: cover;
 }
 input:focus {outline: none;}
@@ -9,9 +9,7 @@ input:focus {outline: none;}
   margin: 50px auto 0;
   padding: 20px;
   background-color: #fff;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  position: relative;
 }
 #wrap>h2{
   width: 100%;
@@ -27,96 +25,10 @@ input:focus {outline: none;}
   font-size: 35px;
   color: #0066ff;
 }
-#Appointment{
-  width: 100%;
-}
-#Appointment>h3{
-  width: 100%;
-  background-color: #0066ff;
-  color: #fff;
-  font-size: 18px;
-  font-weight: bolder;
-  text-align: center;
-  line-height: 45px;
-}
-#Appointment>#box{
-  background-color: #fff;
-  padding:20px;
-  border-radius: 0 0 20px 20px;
-    display: flex;
-  justify-content: space-between;
-  box-sizing: border-box;
-}
-#Appointment>#box p{
-  width: 100%;
-  line-height: 1.6;
-  font-size: 13px;
-  color: #888;
-  font-weight: bold;
-  margin: 5px 0;
-}
-#Appointment>#box>ul{
-  width: 250px;
-  position: relative;
-}
-
-#Appointment>#box>ul>li{
-  margin: 10px 0;
-}
-#Appointment>#box>ul>li:first-child{
-  margin-top: 0;
-}
-#Appointment>#box label{
-  font-size: 14px;
-  color: #0066ff;
-  font-weight: bold;
-}
-#Appointment>#box input{
-  margin: 0 10px;
-}
-#Appointment>#box input[type=text]{
-  width: 240px;
-  height: 30px;
-  border: none;
-  border-bottom: 1px solid #0066ff;
-}
-#Appointment>#box input[type=date],input[type=time]{
-  width: 100px;
-  height: 30px;
-  border: none;
-  border-bottom: 1px solid #0066ff;
-}
-
-#Appointment>#box>ul>li:nth-of-type(6){
-  margin-top: 10px;
-}
-#Appointment>#box>ul>li:nth-of-type(6) p{
-  font-size: 13px;
-  color: #888;
-  margin: 10px 0;
-  line-height: 1.6;
-}
-#Appointment ul>li #check{
-  padding-left: 8px;
-}
-#Appointment ul>li #check label{
-color: #000;
-font-weight: normal;
-font-size: 14px;
-}
-#Appointment>#box>ul>li:last-of-type>input[type=submit]{
-  width: 240px;
-  height: 30px;
-  border: 1px solid #0066ff;
-  background-color: #fff;
-  color: #0066ff;
-  font-weight: bold;
-  border-radius: 5px;
-  box-sizing: border-box;
-}
 #Search{
   width: 300px;
   background-color: #fff;
+  margin-bottom: 20px;
 }
 #Search>h3{
   background-color: #0066ff;
@@ -147,12 +59,12 @@ font-size: 14px;
   box-sizing: border-box;
 }
 #Search>.box>select{
-  width: 50px;
+  width: 55px;
   height: 30px;
   border-right: none;
 }
 #Search>.box>input[type=search]{
-  width: 159px;
+  width: 154px;
   height: 30px;
   border: 1px solid #888;
   border-right: none;
@@ -165,11 +77,12 @@ font-size: 14px;
   position: absolute;
   right: 20px; top: 20px;
 }
-#BookList{
+
+#BookRank{
   width: 300px;
   background-color: #fff;
 }
-#BookList>h3{
+#BookRank>h3{
   background-color: #0066ff;
   color: #fff;
   font-size: 18px;
@@ -179,14 +92,14 @@ font-size: 14px;
   border-radius: 20px 20px 0 0;
   position: relative;
 }
-#BookList>h3>span{
+#BookRank>h3>span{
   color: #fff;
   font-size: 18px;
   line-height: 45px;
   position: absolute;
   top: 2px; left:85px;
 }
-#BookList>.box{
+#BookRank>.box{
   position: relative;
   padding: 20px;
     background-color: #fff;
@@ -195,12 +108,13 @@ font-size: 14px;
   border: 1px solid #0066ff;
   box-sizing: border-box;
 }
-#BookList>.box figure{
+#BookRank>.box figure{
   display: flex;
   justify-content: space-around;
   align-items: center;
+  margin: 10px 0;
 }
-#BookList>.box figure>span{
+#BookRank>.box figure>span{
   width: 30px;
   font-size: 23px;
   text-align: center;
@@ -208,33 +122,31 @@ font-size: 14px;
   font-weight: bold;
   line-height: 30px;
 }
-#BookList>.box figure>img{
+#BookRank>.box figure>img{
   background-color: #0066ff;
   width: 50px;
   height: 60px;
 }
-#BookList>.box figure>figcaption>dl{
-  width: 100px;
+#BookRank>.box figure>figcaption>dl{
+  width: 150px;
+  margin-left: 8px;
 }
-#BookList>.box figure>figcaption>dl>dt{
+#BookRank>.box figure>figcaption>dl>dt{
   color: #0066ff;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: bold;
   margin-bottom: 5px;
 }
-#BookList>.box figure>figcaption>dl>dd{
-  font-size: 14px;
+#BookRank>.box figure>figcaption>dl>dd{
+  font-size: 13px;
   color: #888;
   font-weight: bold;
 }
-#BookInfo{
-  width: 680px;
-  background-color: #fff;
-  border-radius: 20px;
-  border: 1px solid #0066ff;
-  box-sizing: border-box;
-}
-#BookInfo>h3{
+/*  */
+#contain{  width: 680px;
+  position: absolute;
+  top: 72px; right: 20px;}
+#contain>h3{
   background-color: #0066ff;
   color: #fff;
   font-size: 18px;
@@ -243,53 +155,184 @@ font-size: 14px;
   line-height: 45px;
   border-radius: 20px 20px 0 0;
 }
-#BookInfo>ul{
-  margin: 0 20px;
-}
-#BookInfo>ul>li{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin: 15px 0;
-  padding-bottom: 10px;
-}
-#BookInfo>ul>li>dl{
-  width: 500px;
-  position: relative;
-  display: flex;
-  flex-wrap: wrap;
-}
-#BookInfo>ul>li>dl>dt{
-  width: 100px;
-  line-height: 30px;
-  background-color: #c2daff;
-  text-indent: 5px;
-  font-size: 14px;
-}
-#BookInfo>ul>li>dl>dd{
-  width: 400px;
-  line-height: 30px;
-  text-indent: 10px;
-  border: 1px solid #c2daff;
-  border-bottom: none;
-  font-size: 16px;
+#BookInfo{
+  background-color: #fff;
+  border-radius: 0 0 20px 20px;
+  border: 1px solid #0066ff;
   box-sizing: border-box;
 }
-#BookInfo>ul>li>dl>dd:last-child{
-  border-bottom: 1px solid #c2daff;
+#BookInfo>figure{
+  padding: 20px;
+  position: relative;
+  margin: 2px 0;
 }
-#BookInfo>ul>li>button{
-  width: 100px;
-  height: 30px;
+#BookInfo>figure>img{
+  width: 250px;
+  margin: 0 20px;
+  border: 1px solid #888;
+}
+#BookInfo>figure>button{
+  position: absolute;
+  top: 22px; right: 30px;
+  border: 1px solid #0066ff;
+  color: #0066ff;
   background-color: #fff;
-  border: 1px solid #7b1111;
-  color: #7b1111;
+  font-weight: bold;
+  padding: 10px 15px;
   border-radius: 5px;
+}
+#BookInfo>figure>figcaption>ul{
+  width: 250px;
+  margin: 0 20px;
+  position: absolute;
+  top: 20px; right: 0px;
+}
+#BookInfo>figure>figcaption>ul>li{
+  position: relative;
+  margin: 5px 0;
+}
+#BookInfo>figure>figcaption>ul>li>dfn{
+  position:absolute; 
+  left:-60px; top:0;
   font-size: 14px;
   font-weight: bold;
-  box-sizing: border-box;
 }
-#BookInfo>ul>li>button:hover{
+#BookInfo>figure>figcaption>ul>li>span{
+  font-size: 15px;
+}
+#BookInfo>figure>figcaption>ul>li:first-of-type>span{
+  color: #0066ff;
+  font-weight: bold;
+}
+#BookInfo>figure>figcaption>ul>li:nth-of-type(2)>span{
+  color: #888;
+  font-weight: bold;
+}
+
+#Appointment{
+  width: 100%;
+}
+#Appointment>h3{
+  width: 100%;
+  background-color: #0066ff;
   color: #fff;
-  background-color: #7b1111;
+  font-size: 18px;
+  font-weight: bolder;
+  text-align: center;
+  line-height: 45px;
+}
+#Appointment>#box{
+  background-color: #fff;
+  padding:20px;
+  border-radius: 0 0 20px 20px;
+    display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  margin: 2px 0;
+}
+#Appointment>#box p{
+  width: 100%;
+  line-height: 1.6;
+  font-size: 13px;
+  color: #888;
+  font-weight: bold;
+  margin: 10px 0;
+}
+#Appointment>#box>figure{
+  width: 350px;
+  text-align: center;
+  position: relative;
+}
+#Appointment>#box>figure>img{
+  width: 200px;
+  margin: 0 auto;
+  border: 1px solid #888;
+}
+#Appointment>#box>figure ul{
+  width: 100%;
+}
+#Appointment>#box>figure ul>li{
+  margin: 5px 0;
+}
+#Appointment>#box>figure dfn{
+  font-size: 13px;
+  font-weight: bolder;
+}
+#Appointment>#box>figure span{
+  font-size: 18px;
+  margin-left: 10px;
+}
+#Appointment>#box>figure ul>li:first-of-type>span{
+  color: #0066ff;
+  font-weight: bold;
+}
+#Appointment>#box>figure ul>li:last-child>span{
+  color: #888;
+  font-size: 14px;
+  font-weight: bold;
+}
+#Appointment>#box>figure ul>li:last-child>span:last-child{
+  color: #000;
+  font-weight: normal;
+}
+
+#Appointment>#box>ul{
+  width: 280px;
+  position: relative;
+}
+
+#Appointment>#box>ul>li{
+  margin: 10px 0;
+}
+#Appointment>#box>ul>li:first-child{
+  margin-top: 0;
+}
+#Appointment>#box label{
+  font-size: 14px;
+  color: #0066ff;
+  font-weight: bold;
+}
+#Appointment>#box input{
+  margin: 0 10px;
+}
+#Appointment>#box input[type=text]{
+  width: 158px;
+  height: 30px;
+  border: none;
+  border-bottom: 1px solid #0066ff;
+}
+#Appointment>#box input[type=date],input[type=time]{
+  width: 100px;
+  height: 30px;
+  border: none;
+  border-bottom: 1px solid #0066ff;
+}
+
+#Appointment>#box>ul>li:nth-of-type(6){
+  margin-top: 10px;
+}
+#Appointment>#box>ul>li:nth-of-type(6) p{
+  font-size: 13px;
+  color: #888;
+  margin: 10px 0;
+  line-height: 1.6;
+}
+#Appointment ul>li #check{
+  padding-left: 8px;
+}
+#Appointment>#box>ul>li #check label{
+color: #000;
+font-weight: normal;
+font-size: 14px;
+}
+#Appointment>#box>ul>li:last-of-type>input[type=submit]{
+  width: 240px;
+  height: 30px;
+  border: 1px solid #0066ff;
+  background-color: #fff;
+  color: #0066ff;
+  font-weight: bold;
+  border-radius: 5px;
+  box-sizing: border-box;
 }
