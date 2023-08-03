@@ -12,8 +12,14 @@ import BookRank from "./components/BookRank";
 import BookList from './components/BookList';
 
 import bookData from './booklist.json';
+import { useState } from 'react';
 
 export default function App(){
+  const [bookName,setBookName] = useState('');
+  const [writer,setWriter] = useState('');
+  const [publisher,setPublisher] = useState('');
+  const [intro,setIntro] = useState('');
+  
   return(
     <div id="wrap">
       <h2><span><BiSolidBookAlt /></span>도서 대출 예약 시스템</h2>
