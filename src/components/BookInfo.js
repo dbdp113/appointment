@@ -9,13 +9,15 @@ import book_08 from "../image/book_08.jpg";
 import book_09 from "../image/book_09.jpg";
 import book_10 from "../image/book_10.jpg";
 
+import BookAptList from "./BookAptList";
+
 export default function BookInfo({book}){
   const bookImages = [book_01, book_02, book_03, book_04, book_05, book_06, book_07, book_08, book_09, book_10];
+
   return(
     <>
         <figure>
         <img src={bookImages[0]} alt={book.bookName} />
-        <button type="button">예약하기</button>
         <figcaption>
           <ul>
             <li>
@@ -35,8 +37,13 @@ export default function BookInfo({book}){
               <span>intro</span>
             </li>
           </ul>
+          <div id="btn">
+            <button type="button">대출가능</button>
+            <button type="button">예약하기</button>
+          </div>
         </figcaption>
       </figure>
+      <BookAptList />
     </>
   )
 }

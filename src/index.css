@@ -6,6 +6,7 @@ body{
 input:focus {outline: none;}
 #wrap{
   width: 1000px;
+  height: 1175px;
   margin: 50px auto 0;
   padding: 20px;
   background-color: #fff;
@@ -25,6 +26,7 @@ input:focus {outline: none;}
   font-size: 35px;
   color: #0066ff;
 }
+/*  */
 #Search{
   width: 300px;
   background-color: #fff;
@@ -77,7 +79,7 @@ input:focus {outline: none;}
   position: absolute;
   right: 20px; top: 20px;
 }
-
+/*  */
 #BookRank{
   width: 300px;
   background-color: #fff;
@@ -143,10 +145,12 @@ input:focus {outline: none;}
   font-weight: bold;
 }
 /*  */
-#contain{  width: 680px;
+#BookList{
+  width: 680px;
   position: absolute;
-  top: 72px; right: 20px;}
-#contain>h3{
+  top: 72px; right: 20px;
+}
+#BookList>h3{
   background-color: #0066ff;
   color: #fff;
   font-size: 18px;
@@ -154,6 +158,109 @@ input:focus {outline: none;}
   text-align: center;
   line-height: 45px;
   border-radius: 20px 20px 0 0;
+  position: relative;
+}
+#BookList>h3>span{
+  color: #fff;
+  font-size: 30px;
+  line-height: 45px;
+  position: absolute;
+  top: 4px; left:265px;
+}
+#BookList>.box{
+  height: 1075px;
+  border-radius: 0 0 20px 20px;
+  border: 1px solid #0066ff;
+  box-sizing: border-box;
+
+}
+#BookList>.box>#frame{
+  height: 990px;
+  padding: 30px 40px;
+  overflow: hidden;
+}
+
+#BookList>.box>#frame>ul{
+  background-color: #fff;
+}
+#BookList>.box>#frame>ul>li{
+  width: 100%;
+  margin-bottom: 20px;
+}
+#BookList>.box>#frame>ul>li>figure{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+#BookList>.box>#frame>ul>li>figure>img{
+  width: 100px;
+  height: 150px;
+  border: 1px solid #888;
+  margin-left: 20px;
+}
+#BookList>.box>#frame>ul>li>figure button{
+  border: 1.5px solid #0066ff;
+  color: #0066ff;
+  background-color: #fff;
+  font-weight: bold;
+  padding: 7px 15px;
+  border-radius: 5px;
+  position: absolute;
+  top: 10px; right: 0;
+}
+#BookList>.box>#frame>ul>li>figure ul{
+  width: 350px;
+  position: absolute;
+  top: 0; right: 0;
+}
+#BookList>.box>#frame>ul>li>figure ul>li{
+  position: relative;
+  margin: 10px 0;
+}
+#BookList>.box>#frame>ul>li>figure ul>li>dfn{
+  position: absolute;
+  top: 0; left: -60px;
+  font-size: 14px;
+  font-weight: bold;
+}
+#BookList>.box>#frame>ul>li>figure ul>li>span{
+  font-weight: bold;
+}
+#BookList>.box>#frame>ul>li>figure ul>li:first-of-type>span{
+  color: #0066ff;
+  font-size: 18px;
+}
+#BookList>.box>#frame>ul>li>figure ul>li:nth-of-type(2)>span{
+  color: #888;
+}
+#BookList>.box>#frame>ul>li>figure ul>li:nth-of-type(3)>span{
+  font-weight: normal;
+}
+/*  */
+#modal{
+  width: 680px;
+  position: absolute;
+  top: 72px; right: 20px;
+  display: none;
+}
+#modal>h3>button{
+  position: absolute;
+  top: 7px; right: 2px;
+  border: none;
+  background-color: transparent;
+  font-size: 30px;
+  color: #fff;
+}
+#modal>h3{
+  background-color: #0066ff;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bolder;
+  text-align: center;
+  line-height: 45px;
+  border-radius: 20px 20px 0 0;
+  position: relative;
 }
 #BookInfo{
   background-color: #fff;
@@ -171,15 +278,22 @@ input:focus {outline: none;}
   margin: 0 20px;
   border: 1px solid #888;
 }
-#BookInfo>figure>button{
+#BookInfo>figure #btn{
   position: absolute;
-  top: 22px; right: 30px;
-  border: 1px solid #0066ff;
+  top: 20px; right: 20px;
+  display: flex;
+  flex-direction: column;
+}
+#BookInfo>figure #btn>button{
+  border: 1.5px solid #0066ff;
   color: #0066ff;
   background-color: #fff;
   font-weight: bold;
-  padding: 10px 15px;
+  padding: 7px 15px;
   border-radius: 5px;
+}
+#BookInfo>figure #btn>button:first-child{
+  margin-bottom: 10px;
 }
 #BookInfo>figure>figcaption>ul{
   width: 250px;
@@ -208,7 +322,32 @@ input:focus {outline: none;}
   color: #888;
   font-weight: bold;
 }
-
+#BookAptList{
+  height: 165px;
+}
+#BookAptList>h4{
+  width: 100%;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  margin: 25px 0 15px;
+}
+#BookAptList>table{
+width: 640px;
+margin: 0 auto 40px;
+}
+#BookAptList>table th{
+  background-color: #c6ddff;
+  font-weight: 600;
+  line-height: 1.8;
+  border-top: 1px solid #0066ff;
+  border-bottom: 1px solid #0066ff;
+}
+#BookAptList>table>tbody>tr>td{
+  text-align: center;
+  line-height: 2;
+  border-bottom: 1px solid #888;
+}
 #Appointment{
   width: 100%;
 }

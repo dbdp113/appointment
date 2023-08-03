@@ -1,11 +1,14 @@
-import BookList from "./components/BookList";
 import './index.css';
 import {BsBookFill,BsFillCaretDownFill} from 'react-icons/bs';
 import {FaClipboardList} from 'react-icons/fa';
 import {FaRankingStar} from 'react-icons/fa6';
+import {IoCloseSharp} from 'react-icons/io5';
+import {BiListUl} from 'react-icons/bi';
 import Search from './components/Search';
 import Appointment from "./components/Appointment";
 import BookInfo from "./components/BookInfo";
+import BookRank from "./components/BookRank";
+import BookList from './components/BookList';
 
 import bookData from './booklist.json';
 
@@ -18,12 +21,22 @@ export default function App(){
       <h3><FaRankingStar /> 도서 인기 순위</h3>
       <div className="box">
         <ol>
-          <BookList book={bookData} />
+          <BookRank book={bookData} />
         </ol>
       </div>
     </div>
-    <div id="contain">
-      <h3><FaClipboardList /> 도서 정보</h3>
+    <div id="BookList">
+      <h3><span><BiListUl /></span> 도서 목록</h3>
+      <div className='box'>
+        <div id='frame'>
+          <ul>
+            <BookList book={bookData} />
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div id="modal">
+      <h3><FaClipboardList /> 도서 정보<button><IoCloseSharp /></button></h3>      
       <div id="BookInfo">
       <BookInfo book={bookData} />
       <div id="Appointment">
