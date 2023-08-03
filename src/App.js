@@ -11,14 +11,25 @@ import BookInfo from "./components/BookInfo";
 import BookRank from "./components/BookRank";
 import BookList from './components/BookList';
 
-import bookData from './booklist.json';
-import { useState } from 'react';
+import { useState, useEffect, useCallback } from 'react';
+
+// import bookData from './booklist.json';
 
 export default function App(){
-  const [bookName,setBookName] = useState('');
-  const [writer,setWriter] = useState('');
-  const [publisher,setPublisher] = useState('');
-  const [intro,setIntro] = useState('');
+  const [list, setList] = useState([]);
+  const [selectBook,setSelectBook] = useState('');
+
+  const fetchList = useCallback(() => {
+    fetch('./bookList.json')
+      .then((response) => response.json())
+      .then((data) => setList(data));
+  }, []);
+
+  useEffect(() => {
+    fetchList();
+  }, [fetchList]);
+
+  const bookRankClick = (book) => {setSelectBook(book)};
   
   return(
     <div id="wrap">
@@ -27,9 +38,7 @@ export default function App(){
       <div id="BookRank">
       <h3><FaRankingStar /> 도서 대출 인기 순위</h3>
       <div className="box">
-        <ol>
-          <BookRank book={bookData} />
-        </ol>
+          <BookRank book={list} bookRankClick={bookRankClick} />
       </div>
     </div>
     <div id="BookList">
@@ -37,7 +46,7 @@ export default function App(){
       <div className='box'>
         <div id='frame'>
           <ul>
-            <BookList book={bookData} />
+            <BookList book={list} />
           </ul>
         </div>
       </div>
@@ -45,10 +54,10 @@ export default function App(){
     <div id="modal">
       <h3><FaClipboardList /> 도서 정보<button><IoCloseSharp /></button></h3>      
       <div id="BookInfo">
-      <BookInfo book={bookData} />
+      <BookInfo book={selectBook} />
       <div id="Appointment">
       <h3>도서 대출 예약 &nbsp;<span><BsFillCaretDownFill /></span></h3>
-      <Appointment book={bookData} />
+      <Appointment book={selectBook} />
       </div>
       </div>
     </div>

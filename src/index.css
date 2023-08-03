@@ -279,7 +279,6 @@ input:focus {outline: none;}
 }
 #BookInfo>figure>img{
   width: 250px;
-  margin: 0 20px;
   border: 1px solid #888;
 }
 #BookInfo>figure #btn{
@@ -301,18 +300,26 @@ input:focus {outline: none;}
   margin-bottom: 10px;
 }
 #BookInfo>figure>figcaption>ul{
-  width: 250px;
+  width: 290px;
   margin: 0 20px;
   position: absolute;
-  top: 20px; right: 0px;
+  top: 17px; right: 20px;
 }
 #BookInfo>figure>figcaption>ul>li{
   position: relative;
-  margin: 5px 0;
+  margin: 10px 0;
+}
+#BookInfo>figure>figcaption>ul>li:first-of-type{
+  width: 200px;
+}
+#BookInfo>figure>figcaption>ul>li:last-of-type>span{
+  width: 280px;
+  line-height: 1.6;
+  font-size: 13px;
 }
 #BookInfo>figure>figcaption>ul>li>dfn{
   position:absolute; 
-  left:-60px; top:0;
+  left:-60px; top:3px;
   font-size: 14px;
   font-weight: bold;
 }
