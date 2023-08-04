@@ -1,11 +1,16 @@
 
-
-export default function BookRank({book,bookRankClick}){
+export default function BookRank({book,setSelectBook,modalToggle,setModalToggle}){
   const book10Rank = book.slice(0,10);
+
+  const bookList = (book) => {
+    setSelectBook(book);
+    setModalToggle(true);
+  };
+  
   return(
     <>
     <ol>
-    {book10Rank.map((book) => (<li key={book.id} onClick={() => bookRankClick(book)}>
+    {book10Rank.map((book) => (<li key={book.id} onClick={() => bookList(book)}>
       <figure>
         <span>{Number(book.id) +1}</span>
         <img src={`${book.image}`} alt={book.bookName} />

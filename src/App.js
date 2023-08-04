@@ -1,23 +1,19 @@
 import './index.css';
-import {BsFillCaretDownFill} from 'react-icons/bs';
-import {FaClipboardList} from 'react-icons/fa';
+
 import {FaRankingStar} from 'react-icons/fa6';
-import {IoCloseSharp} from 'react-icons/io5';
 import {BiListUl,BiSolidBookAlt} from 'react-icons/bi';
 
 import Search from './components/Search';
-import Appointment from "./components/Appointment";
-import BookInfo from "./components/BookInfo";
 import BookRank from "./components/BookRank";
 import BookList from './components/BookList';
 
 import { useState, useEffect, useCallback } from 'react';
-
-// import bookData from './booklist.json';
+import Modal from './components/Modal';
 
 export default function App(){
   const [list, setList] = useState([]);
   const [selectBook,setSelectBook] = useState('');
+  const [modalToggle, setModalToggle] = useState(false);
 
   const fetchList = useCallback(() => {
     fetch('./bookList.json')
@@ -28,8 +24,6 @@ export default function App(){
   useEffect(() => {
     fetchList();
   }, [fetchList]);
-
-  const bookRankClick = (book) => {setSelectBook(book)};
   
   return(
     <div id="wrap">
@@ -38,7 +32,7 @@ export default function App(){
       <div id="BookRank">
       <h3><FaRankingStar /> 도서 대출 인기 순위</h3>
       <div className="box">
-          <BookRank book={list} bookRankClick={bookRankClick} />
+          <BookRank book={list} setSelectBook={setSelectBook} modalToggle={modalToggle} setModalToggle={setModalToggle} />
       </div>
     </div>
     <div id="BookList">
@@ -51,16 +45,7 @@ export default function App(){
         </div>
       </div>
     </div>
-    <div id="modal">
-      <h3><FaClipboardList /> 도서 정보<button><IoCloseSharp /></button></h3>      
-      <div id="BookInfo">
-      <BookInfo book={selectBook} />
-      <div id="Appointment">
-      <h3>도서 대출 예약 &nbsp;<span><BsFillCaretDownFill /></span></h3>
-      <Appointment book={selectBook} />
-      </div>
-      </div>
-    </div>
+    <Modal selectBook={selectBook} setSelectBook={setSelectBook} modalToggle={modalToggle} setModalToggle={setModalToggle} />
       </div>
   )
 }
