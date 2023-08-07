@@ -14,6 +14,12 @@ export default function App(){
   const [list, setList] = useState([]);
   const [selectBook,setSelectBook] = useState('');
   const [modalToggle, setModalToggle] = useState(false);
+  const [showAppoint,setShowAppoint] = useState(false);
+  const [query,setQuery] = useState('');
+  const [filterOption,setFilterOption] = useState('');
+  const [LoanList,setLoanList] = useState([]);
+  const [aptList,setAptLis] = useState([]);
+  const [newApt,setNewApt] = useState([]);
 
   const fetchList = useCallback(() => {
     fetch('./bookList.json')
@@ -24,15 +30,25 @@ export default function App(){
   useEffect(() => {
     fetchList();
   }, [fetchList]);
-  
+
+  const filterBook = list.filter((book) => {
+    if (filterOption === '' || filterOption === '전체') {
+      return Object.values(book).some(value =>
+        value.toString().toLowerCase().includes(query.toLowerCase())
+      );
+    } else {
+      return book[filterOption].toString().toLowerCase().includes(query.toLowerCase());
+    }
+  })
+
   return(
     <div id="wrap">
       <h2><span><BiSolidBookAlt /></span>도서 대출 예약 시스템</h2>
-      <Search />
+      <Search query={query} setQuery={setQuery} setFilterOption={setFilterOption} />
       <div id="BookRank">
       <h3><FaRankingStar /> 도서 대출 인기 순위</h3>
       <div className="box">
-          <BookRank book={list} setSelectBook={setSelectBook} modalToggle={modalToggle} setModalToggle={setModalToggle} />
+          <BookRank book={list} setSelectBook={setSelectBook} setModalToggle={setModalToggle} />
       </div>
     </div>
     <div id="BookList">
@@ -40,12 +56,12 @@ export default function App(){
       <div className='box'>
         <div id='frame'>
           <ul>
-            <BookList book={list} />
+            <BookList book={filterBook} setSelectBook={setSelectBook} setModalToggle={setModalToggle} />
           </ul>
         </div>
       </div>
     </div>
-    <Modal selectBook={selectBook} setSelectBook={setSelectBook} modalToggle={modalToggle} setModalToggle={setModalToggle} />
+    <Modal selectBook={selectBook} setSelectBook={setSelectBook} modalToggle={modalToggle} setModalToggle={setModalToggle} showAppoint={showAppoint} setShowAppoint={setShowAppoint} LoanList={LoanList} setLoanList={setLoanList} aptList={aptList} setAptList={setAptLis} newApt={newApt} setNewApt={setNewApt} />
       </div>
   )
 }

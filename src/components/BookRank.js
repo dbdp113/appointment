@@ -1,5 +1,5 @@
 
-export default function BookRank({book,setSelectBook,modalToggle,setModalToggle}){
+export default function BookRank({book,setSelectBook,setModalToggle}){
   const book10Rank = book.slice(0,10);
 
   const bookList = (book) => {

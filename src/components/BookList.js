@@ -1,8 +1,14 @@
 
-export default function BookList({book}){
+export default function BookList({book,setSelectBook,setModalToggle}){
+
+    const bookList = (book) => {
+    setSelectBook(book);
+    setModalToggle(true);
+  };
+
   return(
     <>
-    {book.map((book,index) => (
+    {book.map((book) => (
     <li key={book.id}>
       <figure>
         <img src={`${book.image}`} alt={book.bookName} />
@@ -21,7 +27,7 @@ export default function BookList({book}){
               <span>{book.publisher}</span>
             </li>
           </ul>
-          <button>자세히 보기</button>
+          <button onClick={() => bookList(book)}>자세히 보기</button>
         </figcaption>
       </figure>
     </li>
